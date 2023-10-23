@@ -1,0 +1,28 @@
+pipeline{
+agent any
+tools {
+maven Maven
+}
+stages{
+stage('checkout')
+    {
+      
+    }
+stage("terraform init")
+{
+  sh "terraform init"
+}
+stage("terraform plan")
+{
+  sh "terraform plan" 
+}
+stage("terraform apply")
+{
+  sh "terraform apply" 
+}
+stage("Build")
+{
+  sh "mvn clean package"
+}
+}
+}
