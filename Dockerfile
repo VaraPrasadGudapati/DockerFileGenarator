@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY target/Dockerfile_gen.jar /usr/app
+COPY . .
 WORKDIR /user/app
 ENTRYPOINT ["java","-jar","Dockerfile_gen.jar"]
