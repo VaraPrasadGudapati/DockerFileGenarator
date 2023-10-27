@@ -1,8 +1,8 @@
 #provider
 provider "aws" {
     region ="us-east-1"
-    access_key = "AKIAV2BFE3KH4AX2S37G" 
-    secret_key = "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"
+    access_key = "AKIA2YGOCP4M4EDJF3X6" 
+    secret_key = "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"
 }
 #Resource of multiple applications
 resource "aws_instance" "multiple_applications" {
