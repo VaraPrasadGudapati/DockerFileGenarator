@@ -1,8 +1,8 @@
 #provider
 provider "aws" {
     region ="us-east-1"
-    access_key = "AKIAT4VWIAVTONDCNTUH" 
-    secret_key = "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"
+    access_key = "AKIA46KBYY6HBZPJLVK7" 
+    secret_key = "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"
 }
 #Resource of multiple applications
 resource "aws_instance" "multiple_applications" {
@@ -22,7 +22,14 @@ resource "aws_instance" "multiple_applications" {
  }
  provisioner "remote-exec" {
   inline = [
-    
+            "apt install unzip",
+            "adduser sonarqube",
+            "wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip -y",
+            "unzip *",
+            "chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424",
+            "chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424",
+            "cd sonarqube-9.4.0.54424/bin/linux-x86-64/",
+            "./sonar.sh start"           
   ] 
     }  
     
@@ -73,6 +80,13 @@ resource "aws_security_group" "allow_ssh" {
     # SSH Port 80 allowed from any IP
     from_port   = 8080
     to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+ ingress {
+    # SSH Port 80 allowed from any IP
+    from_port   = 9000
+    to_port     = 9000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
