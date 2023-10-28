@@ -40,8 +40,8 @@ pipeline {
         stage('Dockerhub login in' ) {
             steps {
                 script {
-                   withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'Dockerhubpwd')]) {
-                   sh 'docker login -u gudapativaraprasad1987 -p ${Dockerhubpwd}'    
+                  withCredentials([string(credentialsId: 'MounikaDockerhubpwd1', variable: 'MonikaDockerHub')]) {
+                      sh 'docker login -u Mounika420 -p ${MonikaDockerHub}'    
                 }
                                    
                 }
