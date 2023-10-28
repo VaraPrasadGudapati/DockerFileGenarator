@@ -33,7 +33,7 @@ pipeline {
         stage('Docker image') {
             steps {
                 script {
-                sh 'docker build -t gudapativaraprasad1987/dockerfile-gen .'
+                sh 'docker build -t mounika420/dockerfile-gen .'
                 }
               }
         }
@@ -49,7 +49,7 @@ pipeline {
         }
         stage ('Docker push') {
             steps {
-                sh 'docker push Mounika420/dockerfile-gen'    
+                sh 'docker push mounika420/dockerfile-gen'    
             }
             
         }
