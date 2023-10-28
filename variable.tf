@@ -1,6 +1,6 @@
 variable "accesskey"{
-default ="AKIATRE5M5M232CNOBN3"
+default ="AKIATRE5M5M2SKT44VPD"
 }
 variable "seckey"{
-default ="TxBvDGvmttfZo5pJT0eJgWxDAW2D3d6dFq22+kpe"
+default ="nIh+6WJSimg2RjniakWlF1aMtdxe3JswZhljv4sF"
 }
