@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script {
                   withCredentials([string(credentialsId: 'MounikaDockerhubpwd1', variable: 'MonikaDockerHub')]) {
-                      sh 'docker login -u Mounika420 -p ${MonikaDockerHub}'    
+                      sh 'docker login -u mounika420 -p ${MonikaDockerHub}'    
                 }
                                    
                 }
