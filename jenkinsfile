@@ -49,7 +49,7 @@ pipeline {
         }
         stage ('Docker push') {
             steps {
-                sh 'docker push gudapativaraprasad1987/dockerfile-gen'    
+                sh 'docker push Mounika420/dockerfile-gen'    
             }
             
         }
