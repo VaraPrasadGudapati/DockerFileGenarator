@@ -12,13 +12,13 @@ spec:
      app: dockerfile
  template:
   metadata:
-   name: Dockerfilepd
+   name: Dockerfilepod
    labels:
      app: dockerfile	 
   spec: 
     containers:
     - name: dockerfilecontainer
-      image: 
+      image: gudapativaraprasad1987/dockerfile-gen
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
@@ -26,11 +26,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: mavenwebappsvc
+ name: dockerfilesvc
 spec:
   type: LoadBalancer
   selector:
-   app: mavenwebapp
+   app: dockerfile
   ports:
    - port: 80
      targetPort: 8080
