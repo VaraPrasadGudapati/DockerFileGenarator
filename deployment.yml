@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: default
+  name: DockerApp
 spec:
   selector:
     matchLabels:
@@ -35,3 +35,4 @@ spec:
       targetPort: 8080 # The port exposed by the service
 
   type: NodePort # type of the service.
+
